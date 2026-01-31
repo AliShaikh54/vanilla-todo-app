@@ -32,6 +32,7 @@ function addtask(){      // Create new task object
    
     //Add to tasks array
     tasks.push({text : taskText, completed: false});
+    console.log(taskText,'added to task list.');
     taskInput.value='';         // clear input field
     renderTasks();              // Update UI
 }
@@ -66,6 +67,7 @@ function renderTasks(){
 
         deleteBtn.addEventListener('click',()=>{
             tasks.splice(index, 1);
+            console.log(task.text,'deleted.');
             renderTasks();
         });
 
